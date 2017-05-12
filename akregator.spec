@@ -61,7 +61,7 @@ easy news reading.
 %{_docdir}/*/*/akregator
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
-%{_kde5_notificationsdir}/akregator.notifyrc
+%{_datadir}/knotifications5/akregator.notifyrc
 %{_kde5_services}/akregator_*.desktop
 %{_kde5_services}/feed.protocol
 %{_kde5_services}/kontact/akregatorplugin.desktop
