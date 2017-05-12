@@ -35,7 +35,7 @@ BuildRequires:	cmake(KF5Syndication)
 BuildRequires:	cmake(KF5WebEngineViewer)
 BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
-Requires:	boost-devel
+BuildRequires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
 
@@ -50,26 +50,26 @@ easy news reading.
 
 %files
 %{_kde5_applicationsdir}/org.kde.akregator.desktop
-%{_kde5_bindir}/akregator
-%{_kde5_bindir}/akregatorstorageexporter
-%{_kde5_datadir}/config.kcfg/akregator.kcfg
-%{_kde5_datadir}/kconf_update/akregator*
-%dir %{_kde5_datadir}/akregator/
-%{_kde5_datadir}/akregator/*
-%{_kde5_datadir}/kontact/ksettingsdialog/akregator.setdlg
-%{_kde5_datadir}/messageviewer/about/default/introduction_akregator.html
-%{_kde5_docdir}/*/*/akregator
-%{_kde5_iconsdir}/hicolor/*/apps/akregator.*
-%{_kde5_iconsdir}/hicolor/*/apps/akregator_empty.*
+%{_bindir}/akregator
+%{_bindir}/akregatorstorageexporter
+%{_datadir}/config.kcfg/akregator.kcfg
+%{_datadir}/kconf_update/akregator*
+%dir %{_datadir}/akregator/
+%{_datadir}/akregator/*
+%{_datadir}/kontact/ksettingsdialog/akregator.setdlg
+%{_datadir}/messageviewer/about/default/introduction_akregator.html
+%{_docdir}/*/*/akregator
+%{_iconsdir}/hicolor/*/apps/akregator.*
+%{_iconsdir}/hicolor/*/apps/akregator_empty.*
 %{_kde5_notificationsdir}/akregator.notifyrc
 %{_kde5_services}/akregator_*.desktop
 %{_kde5_services}/feed.protocol
 %{_kde5_services}/kontact/akregatorplugin.desktop
 %{_kde5_servicetypes}/akregator_plugin.desktop
-%{_kde5_sysconfdir}/xdg/akregator.categories
-%{_kde5_sysconfdir}/xdg/akregator.renamecategories
+%{_sysconfdir}/xdg/akregator.categories
+%{_sysconfdir}/xdg/akregator.renamecategories
 %{_kde5_xmlguidir}/akregator/*.rc
-%{_appdatadir}/org.kde.akregator.appdata.xml
+%{_datadir}/metainfo/org.kde.akregator.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
 %{_qt5_plugindir}/akregator_*.so
 %{_qt5_plugindir}/akregatorpart.so
@@ -88,7 +88,7 @@ Group:		System/Libraries
 KDE PIM shared library.
 
 %files -n %{libakregatorinterfaces}
-%{_kde5_libdir}/libakregatorinterfaces.so.%{akregatorinterfaces_major}*
+%{_libdir}/libakregatorinterfaces.so.%{akregatorinterfaces_major}*
 
 #----------------------------------------------------------------------------
 
@@ -103,7 +103,7 @@ Group:		System/Libraries
 KDE PIM shared library.
 
 %files -n %{libakregatorprivate}
-%{_kde5_libdir}/libakregatorprivate.so.%{akregatorprivate_major}*
+%{_libdir}/libakregatorprivate.so.%{akregatorprivate_major}*
 
 #----------------------------------------------------------------------
 
