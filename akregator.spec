@@ -35,6 +35,7 @@ BuildRequires:	cmake(KF5Syndication)
 BuildRequires:	cmake(KF5WebEngineViewer)
 BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
+Requires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
 
