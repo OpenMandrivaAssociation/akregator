@@ -48,7 +48,7 @@ hundreds of news sources conveniently. It comes with Konqueror
 integration for adding news feeds and with an internal browser for
 easy news reading.
 
-%files
+%files -f %{name}.lang
 %{_kde5_applicationsdir}/org.kde.akregator.desktop
 %{_bindir}/akregator
 %{_bindir}/akregatorstorageexporter
@@ -118,3 +118,5 @@ KDE PIM shared library.
 %ninja_install -C build
 
 rm -rf %{buildroot}%{_kde5_libdir}/libakregatorinterfaces.so
+
+%find_lang %{name}
