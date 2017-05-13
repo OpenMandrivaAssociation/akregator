@@ -1,7 +1,7 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	17.04.0
-Release:	1
+Release:	2
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -38,6 +38,7 @@ BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
+Conflicts:	kontact < 3:17.04.0
 
 %description
 Akregator is a news feed reader for the KDE desktop. It enables you to
