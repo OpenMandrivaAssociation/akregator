@@ -1,12 +1,13 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	17.04.0
-Release:	2
+Release:	3
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		akregator-17.04.0-OMA-blog-feed.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
@@ -110,6 +111,7 @@ KDE PIM shared library.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build

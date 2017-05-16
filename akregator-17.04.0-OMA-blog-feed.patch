@@ -1,0 +1,20 @@
+diff -Naur akregator-17.04.0/src/akregator_part.cpp akregator-17.04.0.tpg/src/akregator_part.cpp
+--- akregator-17.04.0/src/akregator_part.cpp	2017-04-13 03:08:49.034831104 +0000
++++ akregator-17.04.0.tpg/src/akregator_part.cpp	2017-05-16 23:00:32.691922849 +0000
+@@ -179,6 +179,16 @@
+     frenchKde.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://fr.planetkde.org/rss20.xml"));
+     frenchFolder.appendChild(frenchKde);
+ 
++    // OpenMandrivaAssociation blog feeds
++    QDomElement omaFolder = doc.createElement(QStringLiteral("outline"));
++    omaFolder.setAttribute(QStringLiteral("text"), QStringLiteral("OpenMandriva Association"));
++    body.appendChild(omaFolder);
++
++    QDomElement omaNews = doc.createElement(QStringLiteral("outline"));
++    omaNews.setAttribute(QStringLiteral("text"), i18n("Blog and News"));
++    omaNews.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://blog.openmandriva.org/feed"));
++    omaFolder.appendChild(omaNews);
++
+     return doc;
+ }
+ }
