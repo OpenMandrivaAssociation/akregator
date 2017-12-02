@@ -1,6 +1,6 @@
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -59,7 +59,6 @@ easy news reading.
 %dir %{_datadir}/akregator/
 %{_datadir}/akregator/*
 %{_datadir}/kontact/ksettingsdialog/akregator.setdlg
-%{_datadir}/messageviewer/about/default/introduction_akregator.html
 %{_docdir}/*/*/akregator
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
@@ -70,7 +69,6 @@ easy news reading.
 %{_datadir}/kservicetypes5/akregator_plugin.desktop
 %{_sysconfdir}/xdg/akregator.categories
 %{_sysconfdir}/xdg/akregator.renamecategories
-%{_datadir}/kxmlgui5/akregator/*.rc
 %{_datadir}/metainfo/org.kde.akregator.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
 %{_qt5_plugindir}/akregator_*.so
