@@ -1,12 +1,12 @@
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	17.04.0
-Release:	3
+Version:	 17.12.2
+Release:	1
 Epoch:		3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		akregator-17.04.0-OMA-blog-feed.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
@@ -59,7 +59,6 @@ easy news reading.
 %dir %{_datadir}/akregator/
 %{_datadir}/akregator/*
 %{_datadir}/kontact/ksettingsdialog/akregator.setdlg
-%{_datadir}/messageviewer/about/default/introduction_akregator.html
 %{_docdir}/*/*/akregator
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
@@ -70,7 +69,6 @@ easy news reading.
 %{_datadir}/kservicetypes5/akregator_plugin.desktop
 %{_sysconfdir}/xdg/akregator.categories
 %{_sysconfdir}/xdg/akregator.renamecategories
-%{_datadir}/kxmlgui5/akregator/*.rc
 %{_datadir}/metainfo/org.kde.akregator.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
 %{_qt5_plugindir}/akregator_*.so

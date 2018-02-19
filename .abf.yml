@@ -1,2 +1,4 @@
+removed_sources:
+  akregator-17.12.1.tar.xz: 2db615e6678ab7036d9a5b56940e4f16b26ad3c3
 sources:
-  akregator-17.04.0.tar.xz: 3cade95a4e2e094a9df2896c1dadaa34c294e3d8
+  akregator-17.12.2.tar.xz: 2cba8c4ae9b829512ce0591f92f9236d0a52f2d4
