@@ -110,13 +110,13 @@ KDE PIM shared library.
 %prep
 %setup -q
 %apply_patches
-%cmake_kde5
+%cmake_kde5 -G "Unix Makefiles"
 
 %build
-%ninja -C build
+%make -C build
 
 %install
-%ninja_install -C build
+%makeinstall_std -C build
 
 rm -rf %{buildroot}%{_kde5_libdir}/libakregatorinterfaces.so
 
