@@ -1,6 +1,6 @@
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	 18.04.2
+Version:	18.04.2
 Release:	1
 Epoch:		3
 License:	GPLv2+
@@ -36,6 +36,7 @@ BuildRequires:	cmake(KF5Syndication)
 BuildRequires:	cmake(KF5WebEngineViewer)
 BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
+BuildRequires:	cmake(QGpgme)
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
