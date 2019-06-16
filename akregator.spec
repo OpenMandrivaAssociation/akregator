@@ -3,12 +3,13 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	19.04.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		akregator-17.04.0-OMA-blog-feed.patch
+Requires:	grantlee
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
