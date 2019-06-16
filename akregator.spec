@@ -3,7 +3,7 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	19.04.2
-Release:	3
+Release:	4
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
