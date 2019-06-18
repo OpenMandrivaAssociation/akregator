@@ -11,7 +11,7 @@
 +
 +    QDomElement omaNews = doc.createElement(QStringLiteral("outline"));
 +    omaNews.setAttribute(QStringLiteral("text"), i18n("Blog and News"));
-+    omaNews.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://blog.openmandriva.org/feed"));
++    omaNews.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://www.openmandriva.org/spip.php?page=backend&id_rubrique=10"));
 +    omaFolder.appendChild(omaNews);
 +
      // Brazilian Portuguese feeds
