@@ -3,7 +3,7 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	20.04.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -39,6 +39,7 @@ BuildRequires:	cmake(KF5WebEngineViewer)
 BuildRequires:	cmake(KF5AkonadiMime)
 BuildRequires:	cmake(KF5PimCommonAkonadi)
 BuildRequires:	cmake(QGpgme)
+BuildRequires:	cmake(KUserFeedback)
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
