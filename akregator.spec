@@ -2,7 +2,7 @@
 
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	20.04.3
+Version:	20.07.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -77,7 +77,7 @@ easy news reading.
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
 %{_qt5_plugindir}/akregator_*.so
 %{_qt5_plugindir}/akregatorpart.so
-%{_qt5_plugindir}/kontact_akregatorplugin.so
+%{_qt5_plugindir}/kontact5/kontact_akregatorplugin.so
 
 #----------------------------------------------------------------------------
 
