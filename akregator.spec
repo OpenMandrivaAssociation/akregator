@@ -2,7 +2,7 @@
 
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -66,7 +66,6 @@ easy news reading.
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
 %{_datadir}/knotifications5/akregator.notifyrc
 %{_datadir}/kservices5/akregator_*.desktop
-%{_datadir}/kservices5/kontact/akregatorplugin.desktop
 %{_datadir}/kservicetypes5/akregator_plugin.desktop
 %{_datadir}/qlogging-categories5/akregator.categories
 %{_datadir}/qlogging-categories5/akregator.renamecategories
