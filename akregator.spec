@@ -3,7 +3,7 @@
 Summary:	KDE feed reader application
 Name:		akregator
 Version:	22.04.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
