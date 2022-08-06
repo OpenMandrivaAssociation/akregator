@@ -2,7 +2,7 @@
 
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	22.04.2
+Version:	22.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -65,23 +65,20 @@ easy news reading.
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
 %{_datadir}/knotifications5/akregator.notifyrc
-%{_datadir}/kservices5/akregator_*.desktop
-%{_datadir}/kservicetypes5/akregator_plugin.desktop
 %{_datadir}/qlogging-categories5/akregator.categories
 %{_datadir}/qlogging-categories5/akregator.renamecategories
 %{_datadir}/metainfo/org.kde.akregator.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
-%{_qt5_plugindir}/akregator_*.so
 %{_qt5_plugindir}/akregatorpart.so
-%{_qt5_plugindir}/kontact5/kontact_akregatorplugin.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_advanced.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_appearance.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_archive.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_browser.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_general.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_plugins.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_security.so
-%{_qt5_plugindir}/pim/kcms/akregator/akregator_config_userfeedback.so
+%{_qt5_plugindir}/pim5/kontact/kontact_akregatorplugin.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_advanced.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_appearance.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_archive.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_browser.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_general.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_plugins.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_security.so
+%{_qt5_plugindir}/pim5/kcms/akregator/akregator_config_userfeedback.so
 
 #----------------------------------------------------------------------------
 
