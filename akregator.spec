@@ -2,7 +2,7 @@
 
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	23.04.3
+Version:	23.08.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -28,16 +28,16 @@ BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(KF5IconThemes)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5WindowSystem)
-BuildRequires:	cmake(KF5GrantleeTheme)
-BuildRequires:	cmake(KF5KontactInterface)
-BuildRequires:	cmake(KF5Libkdepim)
-BuildRequires:	cmake(KF5Libkleo)
+BuildRequires:	cmake(KPim5GrantleeTheme)
+BuildRequires:	cmake(KPim5KontactInterface)
+BuildRequires:	cmake(KPim5Libkdepim)
+BuildRequires:	cmake(KPim5Libkleo)
 BuildRequires:	cmake(KPim5MessageViewer)
 BuildRequires:	cmake(KF5PimTextEdit)
 BuildRequires:	cmake(KF5Syndication)
 BuildRequires:	cmake(KPim5WebEngineViewer)
-BuildRequires:	cmake(KF5AkonadiMime)
-BuildRequires:	cmake(KF5PimCommonAkonadi)
+BuildRequires:	cmake(KPim5AkonadiMime)
+BuildRequires:	cmake(KPim5PimCommonAkonadi)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KUserFeedback)
 BuildRequires:	boost-devel
