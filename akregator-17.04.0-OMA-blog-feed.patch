@@ -1,0 +1,21 @@
+diff -up akregator-19.11.80/src/akregator_part.cpp.0000~ akregator-19.11.80/src/akregator_part.cpp
+--- akregator-19.11.80/src/akregator_part.cpp.0000~	2019-11-22 11:13:42.728669747 +0100
++++ akregator-19.11.80/src/akregator_part.cpp	2019-11-22 16:01:19.688631480 +0100
+@@ -131,6 +131,17 @@ static QDomDocument createDefaultFeedLis
+     apps.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://store.kde.org/content.rdf"));
+     mainFolder.appendChild(apps);
+ 
++    // OpenMandrivaAssociation blog feeds
++    QDomElement omaFolder = doc.createElement(QStringLiteral("outline"));
++    omaFolder.setAttribute(QStringLiteral("text"), QStringLiteral("OpenMandriva Association"));
++    body.appendChild(omaFolder);
++
++    QDomElement omaNews = doc.createElement(QStringLiteral("outline"));
++    omaNews.setAttribute(QStringLiteral("text"), i18n("Blog and News"));
++    omaNews.setAttribute(QStringLiteral("xmlUrl"), QStringLiteral("https://www.openmandriva.org/spip.php?page=backend&id_rubrique=10"));
++    omaFolder.appendChild(omaNews);
++
++
+     // spanish feed(s)
+     QDomElement spanishFolder = doc.createElement(QStringLiteral("outline"));
+     spanishFolder.setAttribute(QStringLiteral("text"), i18n("Spanish feeds"));
