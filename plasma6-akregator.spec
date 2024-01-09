@@ -41,6 +41,7 @@ BuildRequires:	cmake(KPim6AkonadiMime)
 BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KF6UserFeedback)
+BuildRequires:	cmake(KF6TextAddonsWidgets)
 BuildRequires:	boost-devel
 Requires:	plasma6-kdepim-runtime
 Suggests:	plasma6-kdepim-addons
