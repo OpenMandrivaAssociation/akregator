@@ -29,6 +29,7 @@ BuildRequires:	cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(KF6TextWidgets)
+BuildRequires:	cmake(KF6StatusNotifierItem)
 BuildRequires:	cmake(KPim6GrantleeTheme)
 BuildRequires:	cmake(KPim6KontactInterface)
 BuildRequires:	cmake(KPim6Libkdepim)
@@ -41,9 +42,8 @@ BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	cmake(QGpgme)
 BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	boost-devel
-Requires:	kdepim-runtime
-Suggests:	kdepim-addons
-Conflicts:	kontact < 3:17.04.0
+Requires:	plasma6-kdepim-runtime
+Suggests:	plasma6-kdepim-addons
 
 %description
 Akregator is a news feed reader for the KDE desktop. It enables you to
