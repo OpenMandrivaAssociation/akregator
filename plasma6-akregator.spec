@@ -14,10 +14,10 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:	pkgconfig(Qt6Test)
-BuildRequires:	pkgconfig(Qt6WebEngine)
+BuildRequires:	pkgconfig(Qt6WebEngineCore)
 BuildRequires:	pkgconfig(Qt6WebEngineWidgets)
 BuildRequires:	pkgconfig(Qt6PrintSupport)
-BuildRequires:	cmake(Grantlee6)
+BuildRequires:	cmake(KF6TextTemplate)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6KCMUtils)
@@ -33,13 +33,12 @@ BuildRequires:	cmake(KPim6KontactInterface)
 BuildRequires:	cmake(KPim6Libkdepim)
 BuildRequires:	cmake(KPim6Libkleo)
 BuildRequires:	cmake(KPim6MessageViewer)
-BuildRequires:	cmake(KF6PimTextEdit)
 BuildRequires:	cmake(KF6Syndication)
 BuildRequires:	cmake(KPim6WebEngineViewer)
 BuildRequires:	cmake(KPim6AkonadiMime)
 BuildRequires:	cmake(KPim6PimCommonAkonadi)
 BuildRequires:	cmake(QGpgme)
-BuildRequires:	cmake(KUserFeedback)
+BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	boost-devel
 Requires:	kdepim-runtime
 Suggests:	kdepim-addons
@@ -54,8 +53,8 @@ hundreds of news sources conveniently. It comes with Konqueror
 integration for adding news feeds and with an internal browser for
 easy news reading.
 
-%files -f %{name}.lang
-%{_kde6_applicationsdir}/org.kde.akregator.desktop
+%files -f akregator.lang
+%{_datadir}/applications/org.kde.akregator.desktop
 %{_bindir}/akregator
 %{_bindir}/akregatorstorageexporter
 %{_datadir}/config.kcfg/akregator.kcfg
@@ -69,16 +68,9 @@ easy news reading.
 %{_datadir}/qlogging-categories6/akregator.renamecategories
 %{_datadir}/metainfo/org.kde.akregator.appdata.xml
 %{_datadir}/dbus-1/interfaces/org.kde.akregator.part.xml
-%{_qt6_plugindir}/akregatorpart.so
-%{_qt6_plugindir}/pim6/kontact/kontact_akregatorplugin.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_advanced.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_appearance.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_archive.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_browser.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_general.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_plugins.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_security.so
-%{_qt6_plugindir}/pim6/kcms/akregator/akregator_config_userfeedback.so
+%{_qtdir}/plugins/pim6/kontact/kontact_akregatorplugin.so
+%{_qtdir}/plugins/pim6/kcms/akregator
+%{_qtdir}/plugins/akregatorpart.so
 
 #----------------------------------------------------------------------------
 
@@ -94,6 +86,7 @@ KDE PIM shared library.
 
 %files -n %{libakregatorinterfaces}
 %{_libdir}/libakregatorinterfaces.so.%{akregatorinterfaces_major}*
+%{_libdir}/libakregatorinterfaces.so.5*
 
 #----------------------------------------------------------------------------
 
@@ -109,22 +102,20 @@ KDE PIM shared library.
 
 %files -n %{libakregatorprivate}
 %{_libdir}/libakregatorprivate.so.%{akregatorprivate_major}*
+%{_libdir}/libakregatorprivate.so.5*
 
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1
-%autopatch -p1
+%autosetup -p1 -n akregator-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja -G "Unix Makefiles"
+	-G Ninja
 
 %build
-%make -C build
+%ninja_build -C build
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
-rm -rf %{buildroot}%{_kde6_libdir}/libakregatorinterfaces.so
-
-%find_lang %{name}
+%find_lang akregator
