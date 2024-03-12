@@ -6,7 +6,7 @@
 Summary:	KDE feed reader application
 Name:		plasma6-akregator
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
@@ -16,7 +16,6 @@ Source0:	https://invent.kde.org/pim/akregator/-/archive/%{gitbranch}/akregator-%
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/akregator-%{version}.tar.xz
 %endif
 Patch0:		akregator-17.04.0-OMA-blog-feed.patch
-Requires:	grantlee
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt6Core)
 BuildRequires:	pkgconfig(Qt6Widgets)
