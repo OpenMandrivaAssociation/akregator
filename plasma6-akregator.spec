@@ -5,7 +5,7 @@
 
 Summary:	KDE feed reader application
 Name:		plasma6-akregator
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -68,8 +68,6 @@ easy news reading.
 %{_bindir}/akregator
 %{_bindir}/akregatorstorageexporter
 %{_datadir}/config.kcfg/akregator.kcfg
-%dir %{_datadir}/akregator/
-%{_datadir}/akregator/*
 %{_docdir}/*/*/akregator
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
