@@ -6,7 +6,7 @@ Version:	23.08.5
 Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 Patch0:		akregator-17.04.0-OMA-blog-feed.patch
 Requires:	grantlee
