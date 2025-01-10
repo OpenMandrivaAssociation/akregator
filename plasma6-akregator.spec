@@ -5,7 +5,7 @@
 
 Summary:	KDE feed reader application
 Name:		plasma6-akregator
-Version:	24.12.0
+Version:	24.12.1
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
