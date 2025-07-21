@@ -5,7 +5,7 @@
 
 Summary:	KDE feed reader application
 Name:		akregator
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -51,8 +51,13 @@ BuildRequires:	cmake(KF6UserFeedback)
 BuildRequires:	cmake(KF6TextAddonsWidgets)
 BuildRequires:	%mklibname -d KF6UserFeedbackWidgets
 BuildRequires:	boost-devel
-Requires:	plasma6-kdepim-runtime
-Suggests:	plasma6-kdepim-addons
+Requires:	kdepim-runtime >= 6.0
+Suggests:	kdepim-addons >= 6.0
+
+%rename plasma6-akregator
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Akregator is a news feed reader for the KDE desktop. It enables you to
@@ -63,12 +68,11 @@ hundreds of news sources conveniently. It comes with Konqueror
 integration for adding news feeds and with an internal browser for
 easy news reading.
 
-%files -f akregator.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.akregator.desktop
 %{_bindir}/akregator
 %{_bindir}/akregatorstorageexporter
 %{_datadir}/config.kcfg/akregator.kcfg
-%{_docdir}/*/*/akregator
 %{_iconsdir}/hicolor/*/apps/akregator.*
 %{_iconsdir}/hicolor/*/apps/akregator_empty.*
 %{_datadir}/knotifications6/akregator.notifyrc
@@ -109,19 +113,3 @@ KDE PIM shared library.
 
 %files -n %{libakregatorprivate}
 %{_libdir}/libakregatorprivate.so.%{akregatorprivate_major}*
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n akregator-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang akregator
